@@ -1,0 +1,28 @@
+/*contacto*/
+.form-control:focus {
+    border: 1px solid #0F0050;
+    outline: none;
+    box-shadow: none;
+}
+
+button[type="submit"],
+button[type="reset"] {
+    background-color: #bb9024;
+    color: white;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.imgContacto {
+    width: 400px;
+    height: 300px;
+}
+
+.section--small {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin: 2px auto 75px;
+}

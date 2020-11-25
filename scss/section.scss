@@ -1,0 +1,342 @@
+/*Sección Imágenes*/
+
+@mixin size ($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
+.section__img {
+    /*border-bottom: 2px solid #967115;*/
+
+    margin-top: 100px;
+    padding: 20px 25%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "area1 area2"
+        "area1 area3";
+    grid-gap: 10px 10px;
+
+    div {
+        overflow: hidden;
+        @include size(100%, 100%);
+    }
+}
+
+.section__img img {
+    transition: all 1s;
+    width: 100%;
+    height: 100%;
+}
+
+
+.section__img img:hover {
+    transform: scale(1.05, 1.05);
+}
+
+@for $i from 1 to 4 {
+    .section__img--img#{$i} {
+        width: auto;
+        grid-area: area+$i;
+    }
+}
+
+
+/*secciones Gral*/
+section {
+    text-align: center;
+    padding: 20px 0;
+    /*border-bottom: 3px solid #967115;*/
+}
+
+@mixin title {
+    color: black;
+    font-family: 'Satisfy', cursive;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.section__title {
+    @include title();
+}
+
+.section__title--product {
+    @extend .section__title;
+    text-align: left;
+    font-size: 2.5rem;
+}
+
+.seccion__title--contact {
+    @extend .section__title;
+    font-family: 'Satisfy', cursive;
+    font-size: 2.5rem;
+}
+
+.section__subtitle {
+    color: black;
+    font-family: 'Satisfy', cursive;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+p,
+form {
+    color: black;
+    font-family: 'Piazzolla', serif;
+    font-weight: 600;
+}
+
+ul li {
+    color: black;
+    font-family: 'Piazzolla', serif;
+    font-weight: 600;
+}
+
+/*Button*/
+button {
+    background-color: black;
+    border-radius: 20px;
+    border: 1px solid black;
+    display: inline;
+    color: white;
+    padding: 6px 20px;
+    font-family: 'Piazzolla', serif;
+}
+
+button:hover {
+    transform: scale(1.05, 1.05);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+.section__flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 25px 20%;
+
+    div {
+        text-align: left;
+    }
+
+    img {
+        @include size(100%, auto);
+        min-width: 150px;
+        max-width: 250px;
+    }
+}
+
+.section__flex--text {
+    width: 50%;
+}
+
+/*Card*/
+.card {
+    box-shadow: 8px 10px 8px -5px #6c6c6c;
+    background-color: rgba(255, 255, 255, 0.671);
+}
+
+.carousel-home {
+    @include size(300px, 300px);
+    overflow: hidden;
+}
+
+.imgCard {
+    max-width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 5px 30px;
+}
+
+.imgCard img {
+    transition: all 1s;
+}
+
+.imgCard img:hover {
+    transform: scale(1.05, 1.05);
+
+}
+
+@media screen and (max-width: 768px) {
+    .carousel {
+        display: none;
+    }
+}
+
+/*seccion servicios home*/
+.flipCard {
+    background-color: transparent;
+    @include size(300px, 300px);
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+}
+
+.flipCard__container {
+    position: relative;
+    @include size(100%, 100%);
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flipCard:hover .flipCard__container {
+    transform: rotateY(180deg);
+}
+
+.flipCard__container--front,
+.flipCard__container--back {
+    position: absolute;
+    backface-visibility: hidden;
+    max-width: 300px;
+    @include size(300px, 300px);
+    overflow: hidden;
+}
+
+.flipCard__container--front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flipCard__container--back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(/res/marble.png);
+    color: black;
+    font-family: 'Satisfy', cursive;
+    transform: rotateY(180deg);
+}
+
+
+img {
+    height: 100%;
+}
+
+/*seccion pagina servicios*/
+.card--servicios {
+    box-shadow: 8px 10px 8px -5px #6c6c6c;
+    background-color: rgba(255, 255, 255, 0.671);
+    margin: 20px 10%;
+    padding: 25px 0;
+}
+
+.card--servicios img {
+    max-width: 300px;
+    @include size(300px, auto);
+}
+
+.card--servicios p {
+    text-align: justify;
+}
+
+
+/*seccion productos pagina productos*/
+.container-carousel img {
+    height: 320px;
+}
+
+.container-carousel .row {
+    position: relative;
+}
+
+.container-carousel a.btn {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    z-index: 10;
+    border-radius: 20px;
+    color: black;
+    background-color: #c3c3c3ca;
+
+}
+
+.container-carousel a.btn[data-slide=next] {
+    position: absolute;
+    top: 45%;
+    left: unset;
+    right: 0;
+    z-index: 10;
+    border-radius: 20px;
+}
+
+/*responsive*/
+
+@media screen and (max-width: 768px) {
+    .flipCard {
+        @include size(300px, 100px);
+    }
+
+    .flipCard__container {
+        @include size(100%, 100%);
+    }
+
+    .flipCard:hover .flipCard__container {
+        transform: none;
+    }
+
+    .flipCard__container--front {
+        display: none;
+    }
+
+    .flipCard__container--back {
+        position: absolute;
+        backface-visibility: hidden;
+        @include size(300px, 100px);
+        max-width: 300px;
+        overflow: hidden;
+        transform: rotateY(0deg);
+        border: 1px solid black;
+        transition: all 1s;
+    }
+
+
+
+    .flipCard__container--back:hover {
+        transform: scale(1.05, 1.05);
+    }
+
+    .section__flex,
+    .section__img {
+        padding: 10px 10%;
+    }
+
+    .container-carousel .carousel {
+        display: unset;
+    }
+
+    .container-carousel .card-body {
+        height: auto;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .card--servicios img {
+        display: none;
+    }
+
+    .section__flex--text {
+        width: 90%;
+    }
+
+    .card-body {
+        height: 200px;
+    }
+
+    .container-carousel img {
+        display: none;
+    }
+}
