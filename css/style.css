@@ -367,10 +367,17 @@ img {
   border-radius: 20px; }
 
 /*responsive*/
+@media screen and (max-width: 1199px) {
+  .container__btn a.btn {
+    left: 2px; }
+  .container__btn a.btn.right {
+    right: 3px; } }
+
 @media screen and (max-width: 768px) {
+  /*Servicios Home*/
   .flipCard {
-    width: 300px;
-    height: 100px; }
+    width: 90%;
+    height: 200px; }
   .flipCard__container {
     width: 100%;
     height: 100%; }
@@ -381,9 +388,9 @@ img {
   .flipCard__container--back {
     position: absolute;
     backface-visibility: hidden;
-    width: 300px;
-    height: 100px;
-    max-width: 300px;
+    width: 100%;
+    height: 200px;
+    max-width: 100%;
     overflow: hidden;
     transform: rotateY(0deg);
     border: 1px solid black;
