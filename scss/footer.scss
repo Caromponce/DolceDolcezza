@@ -30,3 +30,9 @@ footer .section__subtitle {
 .iframeMaps {
     border: 1px solid gray;
 }
+
+@media screen and (max-width: 768px) {
+    iframe {
+        width: 300px;
+    }
+}

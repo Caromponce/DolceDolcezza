@@ -1,0 +1,34 @@
+/*seccion pagina servicios*/
+.card--servicios {
+    box-shadow: 8px 10px 8px -5px #6c6c6c;
+    background-color: rgba(255, 255, 255, 0.671);
+    margin: 20px 10%;
+    padding: 25px 0;
+}
+
+.card--servicios img {
+    max-width: 300px;
+    @include size(300px, auto);
+}
+
+.card--servicios p {
+    text-align: justify;
+}
+
+@media screen and (max-width:992px) {
+    .card--servicios img {
+        display: none;
+    }
+
+    .section__flex--text {
+        width: 90%;
+    }
+
+    .card-body {
+        height: 200px;
+    }
+
+    .container-carousel img {
+        display: none;
+    }
+}

@@ -54,3 +54,10 @@ nav {
         color: #b88a17;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .navbar-light .navbar-brand {
+        padding-left: 0;
+        font-size: 2.5rem;
+    }
+}
