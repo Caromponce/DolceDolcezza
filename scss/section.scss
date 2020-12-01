@@ -70,6 +70,11 @@ section {
     font-size: 2.5rem;
 }
 
+.section__title--sobreMi {
+    @extend .section__title;
+    text-align: left;
+}
+
 .section__subtitle {
     color: black;
     font-family: 'Satisfy', cursive;

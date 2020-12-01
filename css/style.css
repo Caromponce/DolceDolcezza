@@ -108,7 +108,7 @@ section {
   padding: 20px 0;
   /*border-bottom: 3px solid #967115;*/ }
 
-.section__title, .section__title--product, .seccion__title--contact {
+.section__title, .section__title--product, .seccion__title--contact, .section__title--sobreMi {
   color: black;
   font-family: 'Satisfy', cursive;
   font-size: 2rem;
@@ -121,6 +121,9 @@ section {
 .seccion__title--contact {
   font-family: 'Satisfy', cursive;
   font-size: 2.5rem; }
+
+.section__title--sobreMi {
+  text-align: left; }
 
 .section__subtitle {
   color: black;
@@ -404,6 +407,9 @@ img {
   box-shadow: 8px 10px 8px -5px #6c6c6c;
   background-color: rgba(255, 255, 255, 0.671); }
 
+.card--sobreMi p {
+  text-align: justify; }
+
 .carousel--sobreMi {
   max-width: 90%;
   margin: auto; }
@@ -513,7 +519,7 @@ footer {
     font-family: 'Piazzolla', serif;
     font-weight: 800; }
 
-footer .section__title, footer .section__title--product, footer .seccion__title--contact,
+footer .section__title, footer .section__title--product, footer .seccion__title--contact, footer .section__title--sobreMi,
 footer .section__subtitle {
   margin-bottom: 20px; }
 
