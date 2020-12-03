@@ -161,27 +161,16 @@ a:hover {
     overflow: hidden;
 }
 
-.imgCard {
-    max-width: 300px;
-    height: 300px;
-    overflow: hidden;
-    margin: 5px 30px;
-}
 
-.imgCard img {
+.carousel--sobreMiHome img {
     transition: all 1s;
 }
 
-.imgCard img:hover {
+.carousel--sobreMiHome img:hover {
     transform: scale(1.05, 1.05);
 
 }
 
-@media screen and (max-width: 768px) {
-    .carousel {
-        display: none;
-    }
-}
 
 /*Servicios home*/
 .flipCard {

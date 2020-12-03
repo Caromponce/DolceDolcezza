@@ -4,20 +4,47 @@
     padding: 25px 0;
     box-shadow: 8px 10px 8px -5px #6c6c6c;
     background-color: rgba(255, 255, 255, 0.671);
+    min-height: 50vh;
 }
 
 .card--sobreMi p {
     text-align: justify;
 }
 
-.carousel--sobreMi {
-    max-width: 90%;
+
+.carousel--sobreMiPage {
+    overflow: hidden;
+    max-width: 400px;
     margin: auto;
+}
+
+
+.carousel--sobreMiPage img {
+    width: 100%;
+    transition: all 1s;
+    object-fit: cover;
+}
+
+.carousel--sobreMiPage img:hover {
+    transform: scale(1.05, 1.05);
 
 }
 
-.carousel__img {
-    width: 100%;
-    overflow: hidden;
-    object-fit: cover;
+@media screen and (max-width: 1200px) {
+    .section--sobreMi {
+        margin: 20px 8% 75px;
+    }
+}
+
+@media screen and (max-width: 364px) {
+    .section--sobreMi {
+        margin: 0 0 75px;
+        padding-top: 20px;
+        justify-content: center;
+    }
+
+    .carousel--sobreMiPage {
+        min-height: 350px;
+    }
+
 }
