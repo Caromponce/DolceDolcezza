@@ -194,21 +194,11 @@ a:hover {
   height: 300px;
   overflow: hidden; }
 
-.imgCard {
-  max-width: 300px;
-  height: 300px;
-  overflow: hidden;
-  margin: 5px 30px; }
-
-.imgCard img {
+.carousel--sobreMiHome img {
   transition: all 1s; }
 
-.imgCard img:hover {
+.carousel--sobreMiHome img:hover {
   transform: scale(1.05, 1.05); }
-
-@media screen and (max-width: 768px) {
-  .carousel {
-    display: none; } }
 
 /*Servicios home*/
 .flipCard {
@@ -405,19 +395,36 @@ img {
   margin: 20px 15% 75px;
   padding: 25px 0;
   box-shadow: 8px 10px 8px -5px #6c6c6c;
-  background-color: rgba(255, 255, 255, 0.671); }
+  background-color: rgba(255, 255, 255, 0.671);
+  min-height: 50vh; }
 
 .card--sobreMi p {
   text-align: justify; }
 
-.carousel--sobreMi {
-  max-width: 90%;
+.carousel--sobreMiPage {
+  overflow: hidden;
+  max-width: 400px;
   margin: auto; }
 
-.carousel__img {
+.carousel--sobreMiPage img {
   width: 100%;
-  overflow: hidden;
+  transition: all 1s;
   object-fit: cover; }
+
+.carousel--sobreMiPage img:hover {
+  transform: scale(1.05, 1.05); }
+
+@media screen and (max-width: 1200px) {
+  .section--sobreMi {
+    margin: 20px 8% 75px; } }
+
+@media screen and (max-width: 364px) {
+  .section--sobreMi {
+    margin: 0 0 75px;
+    padding-top: 20px;
+    justify-content: center; }
+  .carousel--sobreMiPage {
+    min-height: 350px; } }
 
 /*seccion pagina servicios*/
 .card--servicios {
