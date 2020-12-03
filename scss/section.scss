@@ -138,11 +138,6 @@ a:hover {
         text-align: left;
     }
 
-    /*img {
-        @include size(100%, auto);
-        min-width: 150px;
-        max-width: 250px;
-    }*/
 }
 
 .section__flex--text {
@@ -210,7 +205,6 @@ a:hover {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    /*background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(/res/marble.png);*/
     color: black;
     transform: rotateY(180deg);
 }

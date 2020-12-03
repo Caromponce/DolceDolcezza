@@ -28,7 +28,6 @@ nav {
 
 .navbar-light .navbar-nav .nav-link {
   color: #281c7a;
-  /*color: linear-gradient(90deg, rgba(150, 113, 21, 1) 28%, rgba(106, 78, 9, 1) 65%);*/
   font-family: 'Satisfy', cursive;
   font-size: 1.7rem; }
 
@@ -172,12 +171,7 @@ a:hover {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  padding: 25px 20%;
-  /*img {
-        @include size(100%, auto);
-        min-width: 150px;
-        max-width: 250px;
-    }*/ }
+  padding: 25px 20%; }
   .section__flex div {
     text-align: left; }
 
@@ -236,7 +230,6 @@ a:hover {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  /*background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(/res/marble.png);*/
   color: black;
   transform: rotateY(180deg); }
 
