@@ -1,8 +1,9 @@
 /*Footer*/
-footer {
-    background: rgb(92, 64, 103);
-    background: linear-gradient(45deg, rgba(92, 64, 103, 1) 1%, rgba(119, 92, 129, 1) 12%, rgba(155, 130, 165, 1) 54%, rgba(203, 180, 212, 1) 87%);
+$violet:#3b1d47;
 
+footer {
+    background: rgb(59, 29, 71);
+    background: linear-gradient(90deg, rgba(59, 29, 71, 1) 0%, rgba(86, 44, 102, 1) 61%);
     text-align: center;
     padding: 30px 0;
     display: flex;
@@ -12,14 +13,28 @@ footer {
     align-items: baseline;
     width: 100%;
 
+    div {
+        padding: 0 10px 0 35px;
+    }
+
     div a {
         display: block;
+        justify-content: center;
         text-align: left;
         color: black;
         font-family: 'Piazzolla', serif;
         font-weight: 800;
+        padding-left: 30px;
     }
 
+    div a:hover {
+        color: #ffc944;
+    }
+
+    p {
+        text-align: left;
+        padding-left: 30px;
+    }
 }
 
 footer .section__title,
@@ -27,12 +42,31 @@ footer .section__subtitle {
     margin-bottom: 20px;
 }
 
-.iframeMaps {
-    border: 1px solid gray;
+footer .section__subtitle {
+    padding-right: 60px;
+}
+
+iframe {
+    border: 1px solid black;
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 768px) {
     iframe {
         width: 300px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 945px) {
+    footer div {
+        margin-bottom: 20px;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 583px) {
+    footer .section__subtitle {
+        padding-right: inherit;
     }
 }

@@ -1,5 +1,4 @@
 /*Sección Galeria de Imágenes Home*/
-
 @mixin size ($ancho, $alto) {
     width: $ancho;
     height: $alto;
@@ -44,7 +43,6 @@
 section {
     text-align: center;
     padding: 20px 0;
-    /*border-bottom: 3px solid #967115;*/
 }
 
 @mixin title {
@@ -75,11 +73,26 @@ section {
     text-align: left;
 }
 
+.section__title--footer {
+    @extend .section__title;
+    color: #fbbb1c;
+}
+
 .section__subtitle {
     color: black;
     font-family: 'Satisfy', cursive;
     font-size: 1.5rem;
     margin: 0;
+}
+
+.section__subtitle--footer {
+    @extend .section__subtitle;
+    color: #fbbb1c;
+
+    ~p,
+    ~a {
+        color: #fbbb1c;
+    }
 }
 
 p,

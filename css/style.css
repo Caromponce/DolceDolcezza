@@ -8,28 +8,54 @@ header {
 
 /*Menu*/
 nav {
+  /*background-color: #3b1d47;*/
   background: #3b1d47;
-  background: linear-gradient(90deg, #3b1d47 11%, #482b54 22%, #9b82a5 64%, #cbb4d4 87%); }
+  background: linear-gradient(90deg, #3b1d47 0%, #562c66 61%); }
 
 .navbar-light .navbar-brand:hover {
-  color: #cea02d; }
+  color: #ffc944; }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #120090; }
+  color: #ffc944; }
 
 .nav-item {
   padding: 0 2vw; }
 
 .navbar-light .navbar-brand {
-  color: #b88a17;
+  color: #fbbb1c;
   font-family: 'Satisfy', cursive;
   font-size: 3rem;
   padding-left: 30px; }
 
 .navbar-light .navbar-nav .nav-link {
-  color: #281c7a;
+  color: #fbbb1c;
   font-family: 'Satisfy', cursive;
   font-size: 1.7rem; }
+
+.navbar-light .navbar-toggler {
+  color: #fbbb1c;
+  border-color: #fbbb1c; }
+
+.navbar-toggler-icon {
+  filter: invert(58%) sepia(18%) saturate(3096%) hue-rotate(13deg) brightness(90%) contrast(82%); }
+
+.navbar-nav .dropdown-menu {
+  background: #3b1d47;
+  background: linear-gradient(90deg, #3b1d47 0%, #562c66 61%);
+  margin: 0; }
+
+.navbar-nav .dropdown-menu a {
+  font-family: 'Satisfy', cursive;
+  background: #3b1d47;
+  background: linear-gradient(90deg, #3b1d47 0%, #562c66 61%);
+  color: #fbbb1c;
+  font-size: 1.4rem; }
+
+.navbar-nav .dropdown-menu a:hover {
+  color: #ffc944; }
+
+.hvr-underline-from-center:before {
+  background: #ffc944; }
 
 .dropdown:hover > .dropdown-menu {
   display: block; }
@@ -41,7 +67,7 @@ nav {
 @media screen and (max-width: 992px) {
   .navbar-light .navbar-nav .nav-link {
     font-size: 1.5rem;
-    color: #b88a17; } }
+    color: #fbbb1c; } }
 
 @media screen and (max-width: 768px) {
   .navbar-light .navbar-brand {
@@ -104,10 +130,9 @@ table {
 /*secciones Gral*/
 section {
   text-align: center;
-  padding: 20px 0;
-  /*border-bottom: 3px solid #967115;*/ }
+  padding: 20px 0; }
 
-.section__title, .section__title--product, .seccion__title--contact, .section__title--sobreMi {
+.section__title, .section__title--product, .seccion__title--contact, .section__title--sobreMi, .section__title--footer {
   color: black;
   font-family: 'Satisfy', cursive;
   font-size: 2rem;
@@ -124,11 +149,20 @@ section {
 .section__title--sobreMi {
   text-align: left; }
 
-.section__subtitle {
+.section__title--footer {
+  color: #fbbb1c; }
+
+.section__subtitle, .section__subtitle--footer {
   color: black;
   font-family: 'Satisfy', cursive;
   font-size: 1.5rem;
   margin: 0; }
+
+.section__subtitle--footer {
+  color: #fbbb1c; }
+  .section__subtitle--footer ~ p,
+  .section__subtitle--footer ~ a {
+    color: #fbbb1c; }
 
 p,
 form {
@@ -502,8 +536,8 @@ button[type="reset"]:hover {
 
 /*Footer*/
 footer {
-  background: #5c4067;
-  background: linear-gradient(45deg, #5c4067 1%, #775c81 12%, #9b82a5 54%, #cbb4d4 87%);
+  background: #3b1d47;
+  background: linear-gradient(90deg, #3b1d47 0%, #562c66 61%);
   text-align: center;
   padding: 30px 0;
   display: flex;
@@ -512,20 +546,48 @@ footer {
   justify-content: space-evenly;
   align-items: baseline;
   width: 100%; }
+  footer div {
+    padding: 0 10px 0 35px; }
   footer div a {
     display: block;
+    justify-content: center;
     text-align: left;
     color: black;
     font-family: 'Piazzolla', serif;
-    font-weight: 800; }
+    font-weight: 800;
+    padding-left: 30px; }
+  footer div a:hover {
+    color: #ffc944; }
+  footer p {
+    text-align: left;
+    padding-left: 30px; }
 
-footer .section__title, footer .section__title--product, footer .seccion__title--contact, footer .section__title--sobreMi,
-footer .section__subtitle {
+footer .section__title, footer .section__title--product, footer .seccion__title--contact, footer .section__title--sobreMi, footer .section__title--footer,
+footer .section__subtitle,
+footer .section__subtitle--footer {
   margin-bottom: 20px; }
 
-.iframeMaps {
-  border: 1px solid gray; }
+
+footer .section__subtitle,
+footer .section__subtitle--footer {
+  padding-right: 60px; }
+
+iframe {
+  border: 1px solid black;
+  margin-bottom: 20px; }
 
 @media screen and (max-width: 768px) {
   iframe {
-    width: 300px; } }
+    width: 300px;
+    height: 200px; } }
+
+@media screen and (max-width: 945px) {
+  footer div {
+    margin-bottom: 20px;
+    padding: 0; } }
+
+@media screen and (max-width: 583px) {
+  
+  footer .section__subtitle,
+  footer .section__subtitle--footer {
+    padding-right: inherit; } }
