@@ -41,7 +41,6 @@
 
 /*secciones Gral*/
 section {
-    text-align: center;
     padding: 20px 0;
 }
 
@@ -332,6 +331,10 @@ img {
 
     .button--second {
         display: unset;
+        margin-top: 15px;
+    }
+
+    .button--secondFather {
         text-align: center;
     }
 
@@ -350,11 +353,18 @@ img {
     }
 }
 
+@media screen and (max-width:991px) {
+    .carousel--sobreMiHome {
+        margin: auto;
+    }
+
+}
+
 @media screen and (max-width: 768px) {
 
     /*sobreMi home*/
-    .container--sobreMi {
-        text-align: center;
+    .container--sobreMi p {
+        text-align: justify;
     }
 
     .card {

@@ -129,7 +129,6 @@ table {
 
 /*secciones Gral*/
 section {
-  text-align: center;
   padding: 20px 0; }
 
 .section__title, .section__title--product, .seccion__title--contact, .section__title--sobreMi, .section__title--footer {
@@ -359,6 +358,8 @@ img {
     display: none; }
   .button--second {
     display: unset;
+    margin-top: 15px; }
+  .button--secondFather {
     text-align: center; }
   .carousel-home {
     margin: 0 auto 20px; }
@@ -368,10 +369,14 @@ img {
   .container__btn a.btn.right {
     right: 36px; } }
 
+@media screen and (max-width: 991px) {
+  .carousel--sobreMiHome {
+    margin: auto; } }
+
 @media screen and (max-width: 768px) {
   /*sobreMi home*/
-  .container--sobreMi {
-    text-align: center; }
+  .container--sobreMi p {
+    text-align: justify; }
   .card {
     width: 100%; }
   /*Servicios Home*/
@@ -457,26 +462,33 @@ img {
 .card--servicios {
   box-shadow: 8px 10px 8px -5px #6c6c6c;
   background-color: rgba(255, 255, 255, 0.671);
-  margin: 20px 10%;
+  margin: 15px 20%;
   padding: 25px 0; }
-
-.card--servicios img {
-  max-width: 300px;
-  width: 300px;
-  height: auto; }
 
 .card--servicios p {
   text-align: justify; }
 
+.section__flex--img {
+  width: 300px;
+  height: 240px; }
+  .section__flex--img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+@media screen and (max-width: 1200px) {
+  .card--servicios {
+    margin: 15px 10%; } }
+
 @media screen and (max-width: 992px) {
-  .card--servicios img {
-    display: none; }
   .section__flex--text {
     width: 90%; }
   .card-body {
-    height: 200px; }
-  .container-carousel img {
-    display: none; } }
+    height: 200px; } }
+
+@media screen and (max-width: 768px) {
+  .card--servicios {
+    margin: 5px 0%; } }
 
 /*seccion productos pagina productos*/
 .container-carousel img {
@@ -489,7 +501,7 @@ img {
 .container-carousel a.btn {
   position: absolute;
   top: 45%;
-  left: 0;
+  left: -8px;
   z-index: 10;
   border-radius: 20px;
   color: black;
@@ -499,16 +511,132 @@ img {
   position: absolute;
   top: 45%;
   left: unset;
-  right: 0;
+  right: -8px;
   z-index: 10;
   border-radius: 20px; }
+
+.container-carousel h4 {
+  font-size: 1.6rem; }
+
+.container-carousel p {
+  text-align: justify;
+  font-size: 1.1rem;
+  padding-top: 10px; }
+
+#paginaProductos .card {
+  height: 500px; }
 
 /*responsive*/
 @media screen and (max-width: 1199px) {
   .container__btn a.btn {
     left: 2px; }
   .container__btn a.btn.right {
-    right: 3px; } }
+    right: 3px; }
+  #paginaProductos .card {
+    height: 520px; } }
+
+@media screen and (max-width: 992px) {
+  .container-carousel a.btn {
+    top: 50%; }
+  .container-carousel a.btn[data-slide=next] {
+    top: 50%; }
+  .container-carousel img {
+    display: none; }
+  #paginaProductos .card {
+    height: 280px; }
+    #paginaProductos .card p {
+      font-weight: 700; }
+  /*carousel tortas*/
+  #paginaProductos #carouselTortas .carousel-item:nth-child(1) .row > div:nth-child(1) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/tortaMariposas.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselTortas .carousel-item:nth-child(1) .row > div:nth-child(2) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/tortaSelvaNegra.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselTortas .carousel-item:nth-child(1) .row > div:nth-child(3) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/tortaCumpleaños2.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselTortas .carousel-item:nth-child(2) .row > div:nth-child(1) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/tortaCasamiento3.2.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselTortas .carousel-item:nth-child(2) .row > div:nth-child(2) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/tortaCumpleaños3.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselTortas .carousel-item:nth-child(2) .row > div:nth-child(3) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/tortaCasamiento2.jpg);
+    background-size: cover; }
+  /*carousel tartas*/
+  #paginaProductos #carouselTartas .carousel-item:nth-child(1) .row > div:nth-child(1) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/lemonPie.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselTartas .carousel-item:nth-child(1) .row > div:nth-child(2) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/tartaBrownie.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselTartas .carousel-item:nth-child(1) .row > div:nth-child(3) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/tartaFrutosRojos.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselTartas .carousel-item:nth-child(2) .row > div:nth-child(1) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/tartaRicota.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselTartas .carousel-item:nth-child(2) .row > div:nth-child(2) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/crumbleManzana.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselTartas .carousel-item:nth-child(2) .row > div:nth-child(3) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/tartaFrutal.jpg);
+    background-size: cover; }
+  /*carousel budinesMuffins*/
+  #paginaProductos #carouselBudinesMuffins .carousel-item:nth-child(1) .row > div:nth-child(1) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/budinLimonAmapolas.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselBudinesMuffins .carousel-item:nth-child(1) .row > div:nth-child(2) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/cupcakesZanahorias.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselBudinesMuffins .carousel-item:nth-child(1) .row > div:nth-child(3) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/budinIngles.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselBudinesMuffins .carousel-item:nth-child(2) .row > div:nth-child(1) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/brownie3.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselBudinesMuffins .carousel-item:nth-child(2) .row > div:nth-child(2) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/budinBananaNuez.png);
+    background-size: cover; }
+  #paginaProductos #carouselBudinesMuffins .carousel-item:nth-child(2) .row > div:nth-child(3) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/cupcakes.jpg);
+    background-size: cover; }
+  /*carousel panificados*/
+  #paginaProductos #carouselPanificados .carousel-item:nth-child(1) .row > div:nth-child(1) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/panificados.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselPanificados .carousel-item:nth-child(1) .row > div:nth-child(2) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/panes3.jpeg);
+    background-size: cover; }
+  #paginaProductos #carouselPanificados .carousel-item:nth-child(1) .row > div:nth-child(3) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/panDulce.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselPanificados .carousel-item:nth-child(2) .row > div:nth-child(1) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/facturas2.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselPanificados .carousel-item:nth-child(2) .row > div:nth-child(2) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/facturas.jpg);
+    background-size: cover; }
+  #paginaProductos #carouselPanificados .carousel-item:nth-child(2) .row > div:nth-child(3) .card {
+    background: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.794)), url(../res/pepas.jpg);
+    background-size: cover; } }
+
+@media screen and (max-width: 767px) {
+  #paginaProductos .card {
+    height: 200px; }
+  .container-carousel a.btn {
+    left: 0;
+    top: 50%; }
+  .container-carousel a.btn[data-slide=next] {
+    right: 0;
+    top: 50%; }
+  .container-carousel p {
+    padding: 0 10px; } }
+
+@media screen and (min-width: 576px) {
+  max-width: none; }
 
 /*contacto*/
 .form-control:focus {
@@ -526,8 +654,8 @@ button[type="reset"]:hover {
   transform: scale(1.05, 1.05); }
 
 .imgContacto {
-  width: 400px;
-  height: 300px; }
+  width: 75%;
+  height: auto; }
 
 .section--small {
   padding-top: 20px;
